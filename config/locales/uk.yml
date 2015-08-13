@@ -1,0 +1,39 @@
+uk:
+  activerecord:
+    models:
+      order:
+        one: "Замовлення"
+        other: "Замовлення"
+    attributes:
+      order:
+        customer_firm: "Назва фірми-замовника"
+        contact_name: "Контактна особа"
+        transport_type: "Тип транспортного засобу"
+        transport_from: "Маршрут перевезення -> звідки"
+        transport_to: "Маршрут перевезення -> куди"
+        transport_distance: "Відстань перевезення"
+        volume: "Об'єм перевезення"
+        estimated_date: "Орієнтовна дата перевезення"
+        contact_phone: "Контактний телефон"
+        email: "E-mail"
+        comment: "Додаткові побажання замовника"
+  routes:
+    pages:
+      about: "pro-nas"
+      contact: "contacts"
+      order: "order"
+  breadcrumbs:
+    root: "Головна"
+    pages:
+      contact: "Контакти"
+      order: "Замовити"
+      about: "Про нас"
+    services: "Послуги"
+    articles: "Публікації"
+  articles_title: "Публікації від «Express logistics»"
+  about:
+    proverb:
+      text1: "Наше завдання – організувати всі операції максимально надійно, якісно, оперативно та за доступними цінами."
+    mission: "Наша ціль"
+    progress-dynamics: "Динаміка розвитку"
+    individual-aproach: "Індивідуальний підхід"

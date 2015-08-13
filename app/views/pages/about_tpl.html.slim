@@ -1,0 +1,90 @@
+scss:
+  .aut {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    width: 295px;
+    border-right: 20px solid #f5f5f5;
+    border-left: 20px solid #f5f5f5;
+  }
+
+  .aut img {
+    border: 10px solid #f0f0f0;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+
+  .dir {
+    text-align: center;
+  }
+
+  .dir h3 {
+
+  }
+
+  .dir p.small {
+    font-size: 75%;
+  }
+
+  .dir p.about-p {
+    text-align: left;
+  }
+
+.container.about-proverb
+  .row
+    .span4 style=("text-align: center;")
+      = image_tag('logo-symbol-only.png', :alt => "", :style => "border: 0px solid rgba(239, 239, 239, 1);")
+    #about-pr-container.span8.about-us-full-width.js-txt-a
+      h2.about-h2
+        |О компании &laquo;Express Logistics&raquo;
+      p.about-p
+        |Для предоставления нашим клиентам полностью всего спектра необходимых услуг в области транспортных перевозок, была создана экспедиционная компания «Express logistics». Наша компания предоставляет экспедиторские услуги как по территории Украины так и в международном сообщении.
+          Компания «Express logistics» является относительно молодой, но благодаря успешной деятельности в области транспортных перевозок, приобрела репутацию надежного делового партнера, четко соблюдающего взятые на себя обязательства.
+.container
+  .row
+    .span12.txt-center
+.container
+  .row
+    .span12.txt-center
+      p.quote-proverb
+        span.quote-icon &nbsp;
+        i
+          = t("about.proverb.text1")
+
+
+
+
+
+
+.container.about-listing
+  .row
+    #about-np.span4.about-us-full-width.js-txt-a
+      img.about-img alt="" src=(asset_path('about-head.png')) style=("top: 22px !important;")
+
+
+      h2.about-h2>
+        = t("about.mission")
+
+      p.about-p
+        |Основная цель нашей компании – организовать услугу логистики таким образом, чтобы Вы получили искомый результат, остались довольны сервисом и при этом не волновались, что и как происходит. Наша задача – организовать все операции в лучшем виде, максимально надежно, качественно, оперативно и по доступным ценам.
+    #about-np.span4.about-us-full-width.js-txt-a
+      img.about-img alt="" src=asset_path('about-head.png') style=("top: 22px !important;")
+      h2.about-h2>
+        = t("about.progress-dynamics")
+
+      p.about-p
+        |Компания «Express logistics» является экспедиционной компанией, которая динамично развивается. Мы можем обеспечить Вас необходимым транспортом (независимо от тоннажа, направления, специфики груза).
+          В компании «Express logistics» для вас работают лучшие специалисты в области транспортно-экспедиционной деятельности. Нашими главными корпоративными ценностями являются профессионализм, командность, целеустремленность и ответственность.
+    #about-np.span4.about-us-full-width.js-txt-a
+      img.about-img alt="" src=asset_path('about-head.png') style=("top: 22px !important;")
+
+      h2.about-h2
+        = t("about.individual-aproach")
+
+      p.about-p
+        |Индивидуальный подход к каждому клиенту, безупречное обслуживание и безопасность формируют высокий уровень доверия со стороны наших постоянных клиентов, среди которых мы будем рады видеть и Вас!
+          Мы заинтересованы в плодотворном сотрудничестве с предприятиями, деятельность которых прямо или косвенно связана с перевозками грузов. Пользуясь нашими услугами, Вы получаете комплекс оперативных, надежных и высококачественных услуг по перевозке грузов в любом направлении.

@@ -1,0 +1,62 @@
+scss:
+  .get-back-tous > p {
+    float: left;
+    width: 970px;
+    height: 75px;
+  }
+
+  .get-back-tous p > label {
+    padding-left: 15px;
+  }
+
+  .get-back-tous p.third-glue {
+    width: 310px !important;
+    margin-right: 20px;
+  }
+
+  .get-back-tous p.third-glue.last {
+    margin-right: 0;
+  }
+
+  .get-text, .get-text > textarea {
+    height: 240px !important;
+  }
+.container.service-listing
+  .row
+    .span10.get-back-tous
+      /! <h2 class="services-h2">Заказать</h2
+      p
+        input#name autofocus="" placeholder=("ТзОВ «Транс-Сервіс-1»") type="text" /
+        label for="name"  Назва фірми – замовника :
+      p
+        input placeholder=("Михаил Михаиловичь") type="text" /
+        label for=""  Контактна особа :
+      p
+        input placeholder="Фура" type="text" /
+        label for=""  Тип транспортного засобу :
+      p
+        input placeholder="Львов" style=("width: 48%;") type="text" /
+        | \&nbsp;&mdash;&nbsp;
+        input placeholder="Киев" style=("width: 48%;") type="text" /
+        label for=""  Маршрут перевезення (Звідки&nbsp;&mdash;&nbsp;куди) :
+      p.third-glue
+        input placeholder=("15 км") type="text" /
+        label for=""  Відстань перевезення :
+      p.third-glue
+        input placeholder=("120 л") type="text" /
+        label for=""  Об'єм перевезення :
+      p.third-glue.last
+        input placeholder="23/01/2013" type="date" /
+        label for=""  Орієнтовна дата перевезення :
+      p
+        input placeholder=("+38 (050) 000 000 00") type="text" /
+        label for=""  Контактний телефон * :
+      p
+        input placeholder="support@service.com" type="text" /
+        label for=""  E-mail :
+      p.get-text
+        textarea
+        label for=""  Додаткові побажання замовника :
+      div style=("text-align: right;float: right;")
+        a href="#"
+          img alt="" src="assets/send.png" /

@@ -1,0 +1,69 @@
+- content_for :home_banner do
+  .container-fluid.container-940
+    .row-fluid
+      .span12
+        #banner_j
+          .sliderContent
+            .item.first-slide
+              img alt="" src="http://expresslogistics.com.ua/el-banner-1.png"
+              .flex-info-block
+                .flex-info-block-p
+                  p cargo of any shape and size
+                  p will transport by land
+                  p to anywhere!
+            .item.third-slide
+              img alt="" src="http://expresslogistics.com.ua/el-banner-2.png"
+              .flex-info-block
+                .flex-info-block-p
+                  p fast and sensitive
+                  p air delivery anywhere in the world
+            /! <p>в любую точку!</p
+            .item.last-slide
+              img alt="" src="http://expresslogistics.com.ua/el-banner-4a.png"
+              .flex-info-block
+                .flex-info-block-p
+                  p an economical way of transporting
+                  p goods over long distances
+  #banner-small
+    .container
+      .row
+        .span12.img-banner-small
+          img alt="" src="/assets/el-logo-big.png"
+
+- content_for :home_services do
+  #service-list
+    .container
+      .row
+        - @services.each do |s|
+          a.span2.service-list-car.sr-list-txt href=service_path(id: s.get_url_fragment)
+            img alt=s.get_name src=s.avatar.url(:extra_small)
+            span.name  style=("top: 10px; display: block;border: none !important;")
+              = s.get_name
+
+
+
+#welcome-msg
+  .container
+    .row
+      #hide-sec-logo.span4
+        img alt="" src="/assets/logo-symbol-only.png"
+      #info-text-full.span8
+        h1.welcome-msg-h
+        p
+          | Welcome to &laquo;Express logistics&raquo;
+        p.welcome-msg-p
+        p
+          | The company &laquo;Express logistics&raquo; a forwarding company which provides services in the field of logistics and multimodal transport. The main goal of our company - to organize the logistics services so that you get the desired result, were satisfied with the service and did not care what happens and how.
+        p.welcome-msg-pi
+          i
+            | Our task - to organize all operations as safely, efficiently, quickly and at affordable prices.
+/! welcome-msg
+#proverb-main
+  .container
+    .row
+      .span12.proverb-main-center-txt
+        p.proverb-main-p
+        p
+          | Individual approach to each customer, the service impeccable and security form the high level of trust on the part of our regular clients, which we are happy to see you!
+/! proverb-main
+= render "articles"

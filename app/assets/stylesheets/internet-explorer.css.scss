@@ -1,0 +1,99 @@
+$ie_8: '#ie-8';
+$ie_9: '#ie-9';
+
+#{$ie_8} .flex-info-block-p, #{$ie_9} .flex-info-block-p, .ie .flex-info-block-p{
+	display: block !important;
+}
+
+#{$ie_8} .flex-info-block-p p{
+	background: url('ie_8_alpha_bg.png') repeat;
+}
+
+#{$ie_8} .service-list-air{
+	margin-top: -24px;
+}
+
+#{$ie_8} .service-list-air a{
+	top: 31px;
+}
+
+#{$ie_8} .service-list-water a{
+	top: 31px;
+}
+
+#{$ie_8} .service-list-train a{
+	top: 26px;
+}
+
+#{$ie_8} .service-list-letter a{
+	top: 26px;
+}
+
+#{$ie_8} .service-list-air{
+	margin-top: -28px;
+}
+
+#{$ie_8} .proverb-main-center-txt{
+	width: 100% !important;
+	font-size: 20px !important;
+}
+
+#{$ie_8} .news-home-img{
+	width: 163px;
+	height: 163px;
+}
+
+#{$ie_8} ul.foot-menu li a{
+	font-size: 14px;
+}
+
+#{$ie_8} .service-listing .row .span10 p > input{
+	width: 940px;
+	height: 22px;
+}
+
+#{$ie_8} .service-listing .row .span10 p > textarea{
+	width: 940px;
+	height: 245px;
+}
+
+#{$ie_8} .third-glue{
+	width: 300px;
+	margin-right: 10px;
+	clear: both;
+}
+
+#{$ie_8} .from-to{
+	width: 420px !important;
+}
+
+#{$ie_8} #f_name, #{$ie_8} #f_mail, #{$ie_8} #f_phone{
+	width: 280px !important;
+	height: 22px !important;
+}
+
+#{$ie_8} .first-slide img,
+#{$ie_8} .third-slide img,
+#{$ie_8} .last-slide img{
+	margin-left: -400px !important;
+}
+
+#{$ie_8} .first-slide .flex-info-block,
+#{$ie_8} .third-slide .flex-info-block,
+#{$ie_8} .last-slide .flex-info-block{
+	right: 60% !important;
+}
+
+
+#{$ie_8} ul.head-menu li a{
+	font-size: 16px !important;
+}
+
+
+#{$ie_8}  .dir p.about-p{
+          text-align: left;
+          font-size: 14px !important;
+        }
+
+
+

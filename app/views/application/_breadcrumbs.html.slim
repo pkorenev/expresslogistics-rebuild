@@ -1,0 +1,13 @@
+- if @breadcrumbs.try(&:any?)
+  #about-breadcrumbs.span6.breadcrumbs
+    |//&nbsp;
+    - @breadcrumbs.each_with_index do |b, i|
+      - active = b[:active] || i == @breadcrumbs.length - 1
+      span.breadcrumb class=("active" if active)
+        - if active
+          = b[:name]
+        - else
+          a href=b[:url]
+            = b[:name]
+      - if i < @breadcrumbs.length - 1
+        | &nbsp;/&nbsp;

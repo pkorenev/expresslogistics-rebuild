@@ -1,0 +1,13 @@
+uk:
+  plugins:
+    acts_as_article:
+      published: "Опубліковано"
+      avatar: "Аватар"
+      released_at: "Дата/час видання"
+      name: "Назва"
+      description: "Опис"
+      content: "Контент"
+      url_fragment: "URL-фрагмент"
+      seo_tags: "Метатеги"
+      sitemap_record: "Сайтмап елемент"
+      translations: "Локалізації"

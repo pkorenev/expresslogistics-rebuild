@@ -1,0 +1,47 @@
+scss:
+  .get-back-tous > p {
+    float: left;
+    width: 970px;
+    height: 75px;
+  }
+
+  .get-back-tous p > label {
+    padding-left: 15px;
+  }
+
+  .get-back-tous p.third-glue {
+    width: 310px !important;
+    margin-right: 20px;
+  }
+
+  .get-back-tous p.third-glue.last {
+    margin-right: 0;
+  }
+
+  .get-text, .get-text > textarea {
+    height: 240px !important;
+  }
+
+  .simple_form{
+    input, textarea{
+      display: block;
+    }
+  }
+
+.container.service-listing
+  .row
+    .span10.get-back-tous
+      /! <h2 class="services-h2">Заказать</h2
+      = simple_form_for @order, url: "", type: "post" do |f|
+        = f.input :customer_firm
+        = f.input :contact_name
+        = f.input :transport_type
+        = f.input :transport_from
+        = f.input :transport_to
+        = f.input :transport_distance
+        = f.input :volume
+        = f.input :estimated_date
+        = f.input :contact_phone
+        = f.input :email
+        = f.input :comment
+        = f.submit

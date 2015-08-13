@@ -1,0 +1,7 @@
+.span6.lang-bar.right
+  - @locale_links.each do |locale, link|
+    - if I18n.locale.to_sym != locale.to_sym
+      = link_to locale, link, class: "lang"
+    - else
+      span.lang.active
+        = locale

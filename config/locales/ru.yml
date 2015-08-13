@@ -1,0 +1,40 @@
+ru:
+  activerecord:
+    models:
+      order:
+        one: "Заказ"
+        other: "Заказы"
+    attributes:
+      order:
+        customer_firm: "Название фирмы-заказчика"
+        contact_name: "Контактное лицо"
+        transport_type: "Тип транспортного средства"
+        transport_from: "Маршрут транспортировки -> откуда"
+        transport_to: "Маршрут транспортировки -> куда"
+        transport_distance: "Расстояние перевозки"
+        volume: "Объем перевозки"
+        estimated_date: "Орієнтированная дата перевозки"
+        contact_phone: "Контактный телефон"
+        email: "E-mail"
+        comment: "Дополнительные пожелания заказчика"
+  routes:
+    pages:
+      about: "o-nas"
+      contact: "contacts"
+      order: "order"
+  breadcrumbs:
+    root: "Главная"
+    pages:
+      contact: "Контакты"
+      order: "Заказать"
+      about: "О нас"
+    services: "Услуги"
+    articles: "Публикации"
+  articles_title: "Анонсы от «Express logistics»"
+
+  about:
+    proverb:
+      text1: "Наша задача — организовать все операции максимально надежно, качественно, оперативно и по доступным ценам."
+    mission: "Наша цель"
+    progress-dynamics: "Динамика развития"
+    individual-aproach: "Индивидуальность"

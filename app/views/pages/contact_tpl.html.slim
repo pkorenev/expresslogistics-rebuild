@@ -1,0 +1,60 @@
+.container.contact-proverb
+  .row
+    h2.span12.contact-h2 Contacts
+    .span3.contact-make-full
+      p.orange
+        img.about-img alt="" src="/assets/about-head.png" /
+        i Adress:
+      p.contact-page-p
+        | Україна, м. Львів
+        br/
+        | Кільцева дорога
+        br/
+        | с. Скнилів
+    .span3.contact-make-full.contact-gps-smaller style=("display: block !important;")
+      p.orange
+        img.about-img alt="" src="/assets/about-head.png" /
+        i GPS coordinates:
+      p.contact-page-p
+        i
+          | 49
+          sup °
+          | 48
+          sup ′
+          | 757
+          sup> ″
+          | \&nbsp;&nbsp;&nbsp;&nbsp;Пн.&nbsp;Ш.
+        br/
+        i
+          | 23
+          sup °
+          | 58
+          sup ′
+          | 671
+          sup> ″
+          | \&nbsp;&nbsp;&nbsp;&nbsp;Сх.&nbsp;Д.
+    .span3.fx-m25.contact-make-full
+      p.orange
+        img.about-img alt="" src="/assets/about-head.png" /
+        i Mailing:
+      p.contact-page-p
+        | а/с 2789
+        br/
+        | вул. Городоцька 155,
+        br/
+        | 79018 м. Львів
+    .span3.fx-m115.contact-make-full
+      p.orange
+        img.about-img alt="" src="/assets/about-head.png" /
+        i Telephones:
+      p.contact-page-p style=("line-height: 30px !important;font-weight: bold;font-size: 20px !important;")
+        span style=("font-weight: normal;")  +38 (0322)
+        | 242-12-00
+        br/
+        span style=("float: left;height: 1px;width: 10px;position: relative;display: block;margin-right: 88px;")  &nbsp;
+        | 242-12-00
+
+= render "contact_map"
+= render "contact_managers"
+= render "contact_submanagers"
+= render "contact_form"

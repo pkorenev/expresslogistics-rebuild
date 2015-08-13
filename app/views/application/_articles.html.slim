@@ -1,0 +1,21 @@
+- if @articles.try(&:any?)
+  #news-home
+    .container
+      .row
+        h2.news-home-h2 Последние анонсы
+        - @articles.each do |a|
+          .span6.news-full
+            .news-home-img
+              img alt=a.get_name src=a.avatar.url(:small) style="width: 100%;" title=a.get_name
+            .news-home-descr
+              h3
+                a.service-links href=article_path(id: a.get_url_fragment) title=(a.get_name)
+                  = a.get_name
+
+              p.news-home-main-p
+                = a.get_name
+              p.news-home-link
+                a href=article_path(id: a.get_url_fragment) title=(a.get_name)
+
+        .span12.news-all-link
+          a href=articles_path title=t("articles_title")
