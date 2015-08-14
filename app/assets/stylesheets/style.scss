@@ -811,7 +811,7 @@ ul.foot-menu li a{
 	padding-bottom: 20px;
 }
 
-input, textarea{
+input[type=text], input:not([type]), textarea{
 	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,.16);
 	-moz-box-shadow: inset 1px 1px 2px rgba(0,0,0,.16);
 	box-shadow: inset 1px 1px 2px rgba(0,0,0,.16);
@@ -1371,4 +1371,9 @@ label{
   height: 100px;
   z-index: 11;
   background: rgba(#F27321, 0.4);
+}
+
+.devise-content{
+  max-width: 370px;
+  margin: 0 auto;
 }

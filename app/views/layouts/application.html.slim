@@ -23,5 +23,9 @@ html
       #main.clearfix
         = render "header"
         #page-content
-          = yield
+          - if devise_controller?
+            .devise-content
+              = yield
+          - else
+            = yield
     = render "footer"
