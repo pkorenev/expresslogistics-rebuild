@@ -1,3 +1,4 @@
 asset "fancybox"
 asset "jquery"
 asset "jquery-ui"
+asset "bxslider"

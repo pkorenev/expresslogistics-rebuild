@@ -118,6 +118,10 @@ $(document).ready(function() {
         animationComplete: function(){ $('.flex-info-block').fadeIn('slow'); }
     });
     $('.flex-info-block').fadeIn('slow');
+
+    //$("#banner_j .sliderContent").bxSlider({
+    //
+    //})
 });
 
 $(document).ready(function() {

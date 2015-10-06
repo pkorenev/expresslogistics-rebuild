@@ -146,6 +146,7 @@ ul.head-menu li.active-list{
 }
 
 ul.head-menu li a{
+    display: block;
 	text-transform: uppercase;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -153,6 +154,20 @@ ul.head-menu li a{
 	font-size: 17px;
 	padding-top: 10px;
 	text-decoration: none;
+}
+
+
+
+ul.head-menu{
+  li{
+    &:hover {
+      a {
+        background-image: url(/assets/hover-head-menu.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+      }
+    }
+  }
 }
 
 .hover-eff-about-us{
@@ -1379,4 +1394,12 @@ label{
 .devise-content{
   max-width: 370px;
   margin: 0 auto;
+}
+
+.home-service-list-item{
+  &:nth-child(4) {
+    img {
+      max-width: 90px;
+    }
+  }
 }

@@ -46,6 +46,30 @@ RailsAdmin.config do |config|
 
   Cms.configure_page_models
 
+  config.model Service do
+    field :published do
+      label I18n.t("plugins.acts_as_article.published")
+    end
+    field :translations, :globalize_tabs do
+      label I18n.t("plugins.acts_as_article.translations")
+    end
+    field :avatar do
+      label I18n.t("plugins.acts_as_article.avatar")
+    end
+    field :home_avatar do
+      label "аватарка для головної сторінки"
+    end
+    field :released_at do
+      label I18n.t("plugins.acts_as_article.released_at")
+    end
+    field :seo_tags do
+      label I18n.t("plugins.acts_as_article.seo_tags")
+    end
+    field :sitemap_record do
+      label I18n.t("plugins.acts_as_article.sitemap_record")
+    end
+  end
+
 
   config.model Cms::HtmlBlock do
     visible false

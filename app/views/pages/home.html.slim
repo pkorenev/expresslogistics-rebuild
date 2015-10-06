@@ -5,21 +5,21 @@
         #banner_j
           .sliderContent
             .item.first-slide
-              img alt="" src="http://expresslogistics.com.ua/el-banner-1.png"
+              img alt="" src="/assets/el-banner-1.png"
               .flex-info-block
                 .flex-info-block-p
                   p cargo of any shape and size
                   p will transport by land
                   p to anywhere!
             .item.third-slide
-              img alt="" src="http://expresslogistics.com.ua/el-banner-2.png"
+              img alt="" src="/assets/el-banner-2.png"
               .flex-info-block
                 .flex-info-block-p
                   p fast and sensitive
                   p air delivery anywhere in the world
             /! <p>в любую точку!</p
             .item.last-slide
-              img alt="" src="http://expresslogistics.com.ua/el-banner-4a.png"
+              img alt="" src="/assets/el-banner-4a.png"
               .flex-info-block
                 .flex-info-block-p
                   p an economical way of transporting
@@ -35,8 +35,8 @@
     .container
       .row
         - @services.each do |s|
-          a.span2.service-list-car.sr-list-txt href=service_path(id: s.get_url_fragment)
-            img alt=s.get_name src=s.avatar.url(:extra_small)
+          a.span2.service-list-car.sr-list-txt.home-service-list-item href=service_path(id: s.get_url_fragment)
+            img alt=s.get_name src=s.home_avatar.url(:original)
             span.name  style=("top: 10px; display: block;border: none !important;")
               = s.get_name
 
