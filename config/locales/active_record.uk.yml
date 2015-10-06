@@ -1,0 +1,10 @@
+uk:
+  activerecord:
+    models:
+      pages/about_page: "Про нас"
+      pages/contact_page: "Контакти"
+      pages/home_page: "Головна"
+      pages/order_page: "Замовлення"
+    attributes:
+      article:
+        url: "URL сторінки"

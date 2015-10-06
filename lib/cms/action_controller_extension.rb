@@ -2,14 +2,15 @@ module Cms
   module ActionControllerExtension
     module ClassMethods
       def setup_locale *args, &block
-
-        self.before_action :set_locale#, :set_locale_links, *args, &block
-        self.before_action :set_locale_links
+        with_options if: proc { !(params[:controller] =~ /\Arails_admin/) } do
+          self.before_action :set_locale  #, :set_locale_links, *args, &block
+          self.before_action :set_locale_links
+        end
       end
 
-      def skip_setup_locale *args, &block
-        self.skip_before_action :set_locale#, :set_locale_links, *args, &block
-        self.skip_before_action :set_locale, :set_locale_links
+      def skip_setup_locale **args, &block
+        #self.skip_before_action :set_locale, **args, &block #, :set_locale_links, *args, &block
+        self.skip_before_action :set_locale, :set_locale_links, **args, &block
       end
 
 

@@ -144,6 +144,9 @@ module Cms
 
           if page_model
             RailsAdmin.config(self) do
+              navigation_label do
+                I18n.t("admin.navigation_labels.pages", rescue: true) rescue "Pages"
+              end
               configure :type do
                 hide
               end

@@ -202,7 +202,9 @@ ul.head-menu li a{
 	text-align: center;
 	font-size: 22px;
 	color: white;
-	display: none;
+	//display: none;
+    display: block;
+    z-index: 1;
 }
 
 .flex-info-block-p p{
@@ -497,9 +499,10 @@ ul.head-menu li a{
 }
 
 ul.foot-menu{
+
 	list-style: none;
 	float: right;
-	margin: 0;
+	margin: 14px 0 0 0;
 	padding: 0;
 }
 

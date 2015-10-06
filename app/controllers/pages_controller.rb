@@ -5,10 +5,14 @@ class PagesController < ApplicationController
   def home
     @articles = Article.home_featured
     @services = Service.home_featured
+
+
   end
 
   def about
+    @page = Pages::AboutPage.first.try(&:title)
     @content = Pages::AboutPage.first.try{|p| p.get_content }
+
   end
 
   def contact
@@ -44,7 +48,9 @@ class PagesController < ApplicationController
 
   end
 
+  def set_page_metadata
 
+  end
 end
 
 

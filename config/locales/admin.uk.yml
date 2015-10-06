@@ -1,5 +1,4 @@
 uk:
-  activerecord:
-    attributes:
-      article:
-        url: "URL сторінки"
+  admin:
+    navigation_labels:
+      pages: "Сторінки"

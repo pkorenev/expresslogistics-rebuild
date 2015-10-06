@@ -15,6 +15,23 @@ module Cms
       self.table_name = :seo_tags_translations
       attr_accessible *attribute_names
       belongs_to :meta_tags
+
+      rails_admin do
+        edit do
+          field :locale, :hidden
+          field :title
+          field :keywords
+          field :description
+        end
+      end
+    end
+
+    rails_admin do
+      edit do
+        field :translations, :globalize_tabs
+      end
     end
   end
 end
+
+

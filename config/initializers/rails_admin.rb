@@ -1,14 +1,20 @@
 require_relative 'require_libs'
 
+def pages_navigation_label
+  navigation_label do
+    I18n.t("admin.navigation_labels.pages")
+  end
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
   ## == Cancan ==
   # config.authorize_with :cancan
@@ -41,4 +47,16 @@ RailsAdmin.config do |config|
   Cms.configure_page_models
 
 
+  config.model Cms::HtmlBlock do
+    visible false
+  end
+
+  config.model Cms::Page do
+    visible false
+  end
+
+  config.model Cms::HtmlBlock.translation_class do
+    visible false
+
+  end
 end

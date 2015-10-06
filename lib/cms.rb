@@ -20,7 +20,7 @@ module Cms
     end
 
     def configure_page_models
-      RailsAdmin::Config.included_models += [Cms::HtmlBlock, Cms::HtmlBlock::Translation]
+      RailsAdmin::Config.included_models += [Cms::HtmlBlock, Cms::HtmlBlock::Translation, Cms::MetaTags, Cms::MetaTags.translation_class]
 
       RailsAdmin.config Cms::HtmlBlock do
         field :translations, :globalize_tabs
