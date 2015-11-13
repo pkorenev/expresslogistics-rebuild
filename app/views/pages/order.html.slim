@@ -29,19 +29,58 @@ scss:
   }
 
 .container.service-listing
-  .row
-    .span10.get-back-tous
+
       /! <h2 class="services-h2">Заказать</h2
       = simple_form_for @order, url: "", type: "post" do |f|
-        = f.input :customer_firm
-        = f.input :contact_name
-        = f.input :transport_type
-        = f.input :transport_from
-        = f.input :transport_to
-        = f.input :transport_distance
-        = f.input :volume
-        = f.input :estimated_date
-        = f.input :contact_phone
-        = f.input :email
-        = f.input :comment
-        = f.submit
+        .form-content
+          .row
+            .span6
+              p
+                = f.input_field :customer_firm
+                = f.label :customer_firm
+              p
+                = f.input_field :contact_name
+                = f.label :contact_name
+
+              p
+                = f.input_field :contact_phone
+                = f.label :contact_phone
+              p
+                = f.input_field :email
+                = f.label :email
+
+              p
+                = f.input_field :transport_type
+                = f.label :transport_type
+              p
+                = f.input_field :transport_from
+                = f.label :transport_from
+              p
+                = f.input_field :transport_to
+                = f.label :transport_to
+              p
+                = f.input_field :transport_distance
+                = f.label :transport_distance
+              p
+                = f.input_field :volume
+                = f.label :volume
+              p
+                = f.input_field :estimated_date
+                = f.label :estimated_date
+
+
+              p
+                = f.text_area :comment
+                = f.label :comment
+              p style="text-align: right"
+                button type="submit"
+                  img alt="" src="/assets/send.png"
+
+
+        .preloader style="display: none;"
+          = image_tag("preloader.gif")
+        .success style="display: none"
+          .h1
+            = t("simple_form.success-message.order.title")
+          p
+            = t("simple_form.success-message.order.description")

@@ -20,11 +20,13 @@
 
 @import "bootsrap.css";
 @import "bootstrap-responsive.css";
-@import "mixins";
-@import "style.css";
+@import "normalize";
+@import "_mixins";
+@import "_style";
 @import "fancybox.css";
 @import "flex-controls.css";
 @import "internet-exporer.css";
+@import "forms";
 
 .container{
   margin: 0 auto;

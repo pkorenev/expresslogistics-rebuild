@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_action :set_home_breadcrumbs, except: :home
-  before_action :set_page_class, :set_page_record
+  before_action :set_home_breadcrumbs, except: [:home, :contact_feedback]
+  before_action :set_page_class, :set_page_record, except: [:contact_feedback]
 
   def home
     @articles = Article.home_featured
@@ -29,6 +29,15 @@ class PagesController < ApplicationController
     end
   end
 
+  def contact_feedback
+    @contact_feedback = ContactFeedback.create(contact_feedback_params)
+
+    if @contact_feedback.save
+      ExpressMailer.contact_feedback(@contact_feedback).deliver
+      render inline: @contact_feedback.to_json, status: 201
+    end
+  end
+
   def set_home_breadcrumbs
     @breadcrumbs ||= []
     @breadcrumbs << { url: root_path, name: I18n.t("breadcrumbs.root") }
@@ -50,6 +59,13 @@ class PagesController < ApplicationController
 
   def set_page_metadata
 
+  end
+
+  def contact_feedback_params
+    p = params[:contact_feedback]
+    p[:locale] = I18n.locale
+
+    p
   end
 end
 

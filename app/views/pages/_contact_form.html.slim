@@ -1,23 +1,38 @@
 .container.contact-forms
-  .row
-    .span12
-      p.orange
-        img.about-img alt="" src="/assets/about-head.png"
-        i Feedback form:
-    .span4.contact-make-full-form
-      p
-        input#f_name placeholder=("Voronin Nick ") type="text"
-      p
-        input#f_mail placeholder=("voronin.nick@gmail.com ") type="text"
-        label for=""  @ email
-      p
-        input#f_phone placeholder=("(050) 417 07 28 ") type="text" /
+  = simple_form_for "contact_feedback", url: contact_feedback_path(locale: I18n.locale) do |f|
+    .form-content
+      - f.with_options placeholder: true do |f|
+        .row
+          .span12
+            p.orange
+              img.about-img alt="" src="/assets/about-head.png"
+              i Feedback form:
+          .span4.contact-make-full-form
+            p
+              = f.input_field :name
+              /input#f_name placeholder=("Voronin Nick ") type="text"
+              = f.label :name
 
-        label for=""  phone
-    .span8.contact-make-full-form
-      textarea#text_area placeholder=("Your message.")
+            p
+              = f.input_field :email
+              = f.label :email
+            p
+              = f.input_field :phone
+              = f.label :phone
 
-    .span12
-      div style=("text-align: right;")
-        a href="#"
-          img alt="" src="assets/send.png"
+          .span8.contact-make-full-form
+            p
+              = f.text_area :message
+              = f.label :message
+          .span12
+            div style=("text-align: right;")
+              button type="submit"
+                img alt="" src="/assets/send.png"
+
+    .preloader style="display: none;"
+      = image_tag("preloader.gif")
+    .success style="display: none"
+      .h1
+        = t("simple_form.success-message.contact_feedback.title")
+      p
+        = t("simple_form.success-message.contact_feedback.description")

@@ -1,0 +1,33 @@
+table border="1"
+  tr
+    td
+      |Locale
+    td
+      = @resource.locale
+  tr
+    td
+      |Name
+    td
+      = @resource.name
+
+  tr
+    td
+      |Email
+    td
+      = @resource.email
+
+  tr
+    td
+      |Phone
+    td
+      = @resource.phone
+
+  tr
+    td
+      |Message
+    td
+      = @resource.message
+
+p
+  a href=admin_path("#{@resource.class.name.underscore}/#{@resource.id}")
+    | In admin panel

@@ -1,0 +1,26 @@
+de:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+
+
+    placeholders:
+      defaults:
+        name: "Ім’я"
+        email: "Електронна скринька"
+        phone: "Телефон"
+        message: "Ваше повідомлення"
+
+
+    success-message:
+      order:
+        title: "Vielen Dank für Ihre Anfrage"
+        description: "Doch was das Text"
+      contact_feedback:
+        title: "Danke für Ihre Rückmeldung"
+        description: "einige Beschreibung"

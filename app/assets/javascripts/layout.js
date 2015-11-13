@@ -39,6 +39,35 @@ $(document).ready(function() {
 });
 
 
+
+
+initializeGoogleMap = function(){
+    $map = $("#map map")
+
+    //lat = 49.829182
+    //lng = 24.01275
+    lat = 49.81571
+    lng = 23.919465
+
+    latlng = new google.maps.LatLng(lat, lng)
+
+    mapOptions = {
+        zoom: 17,
+        center: latlng,
+        scrollwheel: true
+    }
+
+
+    map = new google.maps.Map($map.get(0), mapOptions)
+
+    marker = new google.maps.Marker({
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: {lat: lat, lng: lng}
+    });
+}
+
 $(document).ready(function() {
 
 
@@ -72,4 +101,9 @@ $(document).ready(function() {
 
     }
 });
+
+
+initializeGoogleMap()
+
+
 

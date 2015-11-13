@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-
+  post ":locale/contact_feedback", as: :contact_feedback, to: "pages#contact_feedback"
   post ":locale/order", to: "pages#order"
 
   get "(:locale)", to: "pages#home"
@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
 
   get "*url", to: "errors#not_found", as: :not_found
+
+  get "/admin/*url", as: :admin, to: "application#admin"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

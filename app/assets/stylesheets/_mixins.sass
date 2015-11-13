@@ -1,0 +1,39 @@
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+
+=vendor-prefix($name, $argument)
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}
+  
+  
+=animation-name ($name)
+  @include vendor-prefix(animation-name, $name)
+
+=animation-duration ($duration)
+  +vendor-prefix(animation-duration, $duration)
+
+=animation-delay ($delay)
+  +vendor-prefix(animation-delay, $delay)
+
+=animation-fill-mode($fill-mode)
+  +vendor-prefix(animation-fill-mode, $fill-mode)
+
+=animation-iteration-count($value)
+  +vendor-prefix(animation-iteration-count, $value)
+
+
+=transform($transforms)
+  +vendor-prefix(transform, $transforms)
+

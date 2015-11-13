@@ -1,0 +1,31 @@
+ru:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+
+
+    placeholders:
+      defaults:
+        name: "Имя"
+        email: "Электронная почта"
+        phone: "Телефон"
+        message: "Ваше сообщение"
+    labels:
+      defaults:
+        name: "Имя"
+        email: "Электронная почта"
+        phone: "Телефон"
+        message: "Ваше сообщение"
+
+    success-message:
+      order:
+        title: "Спасибо за ваше сообщение"
+        description: "Еще какойто текст"
+      contact_feedback:
+        title: "Спасибо за ваш заказ"
+        description: "Еще какойто текст"

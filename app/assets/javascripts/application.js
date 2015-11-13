@@ -18,5 +18,6 @@
 
 //= require layout
 //= require home
+//= require forms
 
 
