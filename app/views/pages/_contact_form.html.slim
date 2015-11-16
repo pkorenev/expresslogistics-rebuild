@@ -1,5 +1,5 @@
 .container.contact-forms
-  = simple_form_for "contact_feedback", url: contact_feedback_path(locale: I18n.locale) do |f|
+  = simple_form_for "contact_feedback", url: contact_feedback_path(locale: I18n.locale), html: { class: "ajax-submit" } do |f|
     .form-content
       - f.with_options placeholder: true do |f|
         .row

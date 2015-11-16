@@ -62,9 +62,11 @@ module Cms
       def set_locale_links
         #render inline: params[:route_name].to_s
         @locale_links = {}
+
         I18n.available_locales.each do |locale|
           if params[:localized]
-            @locale_links[locale.to_sym] = send("#{params[:route_name]}_#{I18n.locale}_path" )
+            url = send("#{params[:route_name]}_#{locale}_path", locale: locale )
+            @locale_links[locale.to_sym] = url
             next
           elsif params[:route_name]
             @locale_links[locale.to_sym] = send("#{params[:route_name]}_path", locale: locale )

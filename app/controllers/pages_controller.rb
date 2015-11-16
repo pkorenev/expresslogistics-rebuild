@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    @page = Pages::AboutPage.first.try(&:title)
+
     @content = Pages::AboutPage.first.try{|p| p.get_content }
 
   end

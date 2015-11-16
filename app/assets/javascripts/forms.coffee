@@ -1,4 +1,4 @@
-$("form").on "submit", (e)->
+$("form.ajax-submit").on "submit", (e)->
   e.preventDefault()
   $form = $(this)
   form_height = $form.height()

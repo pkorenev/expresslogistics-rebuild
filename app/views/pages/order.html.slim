@@ -31,7 +31,7 @@ scss:
 .container.service-listing
 
       /! <h2 class="services-h2">Заказать</h2
-      = simple_form_for @order, url: "", type: "post" do |f|
+      = simple_form_for @order, url: "", type: "post", html: { class: "ajax-submit" } do |f|
         .form-content
           .row
             .span6

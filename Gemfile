@@ -59,7 +59,7 @@ gem 'rails_admin'
 
 gem 'globalize'
 
-gem 'rails_admin_globalize_field'#, github: "VoroninNick/rails_admin_globalize_field", branch: "allow-current-locale"
+gem 'rails_admin_globalize_field', github: "pkorenev/rails_admin_globalize_field"
 
 gem 'devise'
 
