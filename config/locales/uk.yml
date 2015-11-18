@@ -37,3 +37,18 @@ uk:
     mission: "Наша ціль"
     progress-dynamics: "Динаміка розвитку"
     individual-aproach: "Індивідуальний підхід"
+  header_menu:
+    about: "Про нас"
+    services: "Послуги"
+    order: "Замовити"
+    contacts: "Контакти"
+  footer_menu:
+    about: "Про нас"
+    services: "Послуги"
+    order: "Замовити"
+    articles: "Статті"
+    contacts: "Контакти"
+  copyright: «Expres Logistic». Всі права захищені.
+  handcrafted-by: Зроблено <a href="http://voroninstudio.eu">дизайн студією М. Вороніна</a><br/>в 2012 році.
+  footer_address: с. Ставчани, Пустомитівський район., Львівська обл., Україна, 81118
+  footer_tel: "тел.:"

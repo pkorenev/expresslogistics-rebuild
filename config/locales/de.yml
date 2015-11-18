@@ -32,6 +32,22 @@ de:
     services: "Dienstleistungen"
     articles: "Publikation"
   articles_title: "Articles from «Express logistics»"
+  header_menu:
+    about: "Über uns"
+    services: "Dienstleistungen"
+    order: "Reihenfolge"
+    contacts: "Impressum"
+  footer_menu:
+    about: "Über uns"
+    services: "Dienstleistungen"
+    order: "Reihenfolge"
+    articles: "Gegenstände"
+    contacts: "Impressum"
+
+  copyright: «Expres Logistic». Alle Rechte vorbehalten.
+  handcrafted-by: Handcrafted by <a href="http://voroninstudio.eu">Voronin Design Studio</a><br/>in 2012.
+  footer_address: mit. Stavchany, Pustomyty Bezirk., Lviv Region., Ukraine, 81118
+  footer_tel: "tel.:"
 
   about:
     proverb:
@@ -39,3 +55,4 @@ de:
     mission: "Unsere Aufgabe"
     progress-dynamics: "Das Speditionsunternehmen"
     individual-aproach: "Kundenorientierter Service"
+

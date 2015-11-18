@@ -2,34 +2,37 @@
   .row
     .span6
       p.copyrigths
-        | &copy; 2012 &mdash; 2015 «Expres Logistic». All rights reserved.
+        | &copy; 2012 &mdash; #{Date.today.year} #{t("copyright")}
       .copy-studio
         img alt="" src=(" /assets/vs-logo.png")
         p
-          | Handcrafted by
-          a href="http://voroninstudio.eu"  Voronin Design Studio
-          br
-          | in 2012.
-          a href="http://voroninstudio.eu"  Information.
+          = raw t("handcrafted-by")
+
+
     .span6
       ul.foot-menu
         li
           a href=about_page_path
-            span.proper-link about
+            span.proper-link
+              = t("footer_menu.about")
         li
           a href=order_page_path
-            span.proper-link orders
+            span.proper-link
+              = t("footer_menu.order")
         li
           a href=send("services_#{I18n.locale}_path")
-            span.proper-link services\
+            span.proper-link
+              = t("footer_menu.services")
         li
           a href=send("articles_#{I18n.locale}_path")
-            span.proper-link articles
+            span.proper-link
+              = t("footer_menu.articles")
         li
           a href=contact_page_path
-            span.proper-link contacts
+            span.proper-link
+              = t("footer_menu.contacts")
       .foot-contacts
-        | with. Stavchany, Pustomyty district., Lviv region., Ukraine, 81118
+        = t("footer_address")
         br
-        | tel.:
+        = t("footer_tel")
         span.orange.tel +38 (032) 237 40 61

@@ -32,6 +32,23 @@ ru:
     articles: "Публикации"
   articles_title: "Анонсы от «Express logistics»"
 
+  header_menu:
+    about: "О нас"
+    services: "Услуги"
+    order: "Заказать"
+    contacts: "Контакты"
+  footer_menu:
+    about: "О нас"
+    services: "Услуги"
+    order: "Заказать"
+    articles: "Статьи"
+    contacts: "Контакты"
+
+  copyright: «Expres Logistic». Все права защищены.
+  handcrafted-by: Сделано <a href="http://voroninstudio.eu">дизайн студией Н. Воронина</a><br/>в 2012 году.
+  footer_address: с. Ставчаны, Пустомытовский район., Львовская обл., Украина, 81118
+  footer_tel: "тел.:"
+
   about:
     proverb:
       text1: "Наша задача — организовать все операции максимально надежно, качественно, оперативно и по доступным ценам."

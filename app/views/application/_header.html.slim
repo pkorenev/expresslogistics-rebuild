@@ -10,28 +10,28 @@
         ul.head-menu
 
           li#eng-li-about-us.li-about-us.fake
-            a href=about_page_path title="About"
+            a href=about_page_path title=t("header_menu.about")
               span#eng-hover-eff-about-us.hover-eff-about-us
                 /img alt="About" src=(" /assets/hover-head-menu.png")
-              | About
+              = t("header_menu.about")
 
           li#eng-li-services.li-services.fake
-            a href=services_path title="Services"
+            a href=services_path title=t("header_menu.services")
               span#eng-hover-eff-services.hover-eff-services
                 /img alt="Services" src="/assets/hover-head-menu.png"
-              | services
+              = t("header_menu.services")
 
           li#eng-li-our-park.li-our-park.fake
-            a href=order_page_path title="Orders"
+            a href=order_page_path title=t("header_menu.order")
               span#eng-hover-eff-our-park.hover-eff-our-park
                 /img alt="Orders" src=(" /assets/hover-head-menu.png")
-              | Order
+              = t("header_menu.order")
 
           li.li-contact.fake.eng-li-contact
-            a href=contact_page_path title="Contacts"
+            a href=contact_page_path title=t("header_menu.contacts")
               span.hover-eff-contact.eng-hover-eff-contact
                 /img alt="Contacts" src="/assets/hover-head-menu.png"
-              | CONTACTS
+              = t("header_menu.contacts")
 
 = content_for :home_banner
 = content_for :home_services
