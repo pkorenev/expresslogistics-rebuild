@@ -136,6 +136,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 	position: relative;
 	z-index: 10;
 	top: -15px;
+    overflow: hidden;
 }
 
 ul.head-menu{
@@ -389,7 +390,7 @@ ul.head-menu{
 	width: 140px;
 	height: 169px;
 	vertical-align: text-top;
-    margin-top: -3px !important;
+    margin-top: 7px !important;
 }
 
 .service-list-car:hover,
