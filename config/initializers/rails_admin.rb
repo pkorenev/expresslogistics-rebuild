@@ -47,6 +47,14 @@ unless !!ENV['si']
 
     Cms.configure_page_models
 
+    [Manager, ManagerGroup].each do |m|
+      config.included_models += [m]
+      if m.respond_to?(:translates?) && m.translates?
+        config.included_models += [m.translation_class]
+      end
+    end
+
+
     config.model Service do
       field :published do
         label I18n.t("plugins.acts_as_article.published")
