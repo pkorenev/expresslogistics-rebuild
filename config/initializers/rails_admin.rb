@@ -121,7 +121,7 @@ unless !!ENV['si']
     end
 
     config.model Manager do
-      visible false
+      visible true
 
       # edit do
       #   field :manager_group
@@ -131,6 +131,7 @@ unless !!ENV['si']
       # end
 
       edit do
+        field :manager_group
         field :email
         field :phone
         field :translations, :globalize_tabs
@@ -148,7 +149,6 @@ unless !!ENV['si']
     config.model ManagerGroup do
       edit do
         field :translations, :globalize_tabs
-        field :managers
       end
     end
 
