@@ -130,7 +130,7 @@ unless !!ENV['si']
       #   field :translations, :globalize_tabs
       # end
 
-      nested do
+      edit do
         field :email
         field :phone
         field :translations, :globalize_tabs
