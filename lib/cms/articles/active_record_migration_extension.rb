@@ -34,9 +34,11 @@ module Cms
 
           has_seo_tags
           has_sitemap_record
-          has_attached_file :avatar, (options[:avatar] || {})
-          validates_attachment :avatar, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-          attr_accessible :avatar
+          if options[:avatar] != false
+            has_attached_file :avatar, (options[:avatar] || {})
+            validates_attachment :avatar, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+            attr_accessible :avatar
+          end
 
           scope :published, -> { where(published: true) }
           scope :default_order, -> { order("id desc") }

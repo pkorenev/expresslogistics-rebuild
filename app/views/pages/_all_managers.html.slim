@@ -1,0 +1,42 @@
+.container.managers
+  .row
+    - @manager_groups.each do |group|
+      - if group.managers.count == 1
+        - manager = group.managers.first
+        .span4.contact-make-full
+          p.orange
+            img.about-img alt="" src="/assets/about-head.png" /
+            i
+              = group.name
+          p.contact-page-p
+            = manager.name
+            br
+            - if manager.phone.present?
+              = manager.phone
+              br
+            span.orange.email-icon @
+            a href="mailto:#{manager.email}"
+              = manager.email.split("@").first
+            br
+
+
+.container.sub-managers
+  .row
+    - @manager_groups.each do |group|
+      - if group.manahers.count > 1
+        #managers-zone.contact-make-full
+          p.orange style=("margin-top: 40px;margin-left: 30px;")
+            img.about-img alt="" src="/assets/about-head.png" /
+            i
+              = group.name
+          - group.managers.each do |manager|
+            .span4
+              p.contact-page-p
+                = manager.name
+              - if manager.phone.present?
+                p.contact-page-p
+                  = manager.phone
+              p.contact-page-p
+                span.orange.email-icon @
+                a href="mailto:#{manager.email}"
+                  = manager.email.split("@").first

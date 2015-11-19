@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @manager_groups = ManagerGroup.all
   end
 
   def order

@@ -111,5 +111,47 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Manager do
+    visible false
+
+    edit do
+      field :manager_group
+      field :email
+      field :phone
+      field :translations, :globalize_tabs
+    end
+
+    nested do
+      field :email
+      field :phone
+      field :translations, :globalize_tabs
+    end
+  end
+
+  config.model Manager.translation_class do
+    visible false
+    nested do
+      field :locale, :hidden
+      field :name
+    end
+  end
+
+  config.model ManagerGroup do
+    edit do
+      field :translations, :globalize_tabs
+      field :managers
+    end
+  end
+
+  config.model ManagerGroup.translation_class do
+    visible false
+    nested do
+      field :locale, :hidden
+      field :name
+    end
+  end
+
+
+
 
 end

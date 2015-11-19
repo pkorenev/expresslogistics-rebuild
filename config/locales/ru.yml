@@ -61,3 +61,9 @@ ru:
   contact:
     feedback_form:
       title: "Оставьте отзыв:"
+    contact_managers:
+      director: "Director to Express Logistics:"
+      head: "Head of Commercial and Logistics Department:"
+      office_manager: "Office manager:"
+    contact_submanagers:
+      title: "Manager of Commercial and Logistics Department:"
