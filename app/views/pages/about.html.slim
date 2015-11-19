@@ -34,7 +34,8 @@ scss:
     text-align: left;
   }
 
-= raw @content
+/= raw @content
+= html_block_with_fallback(:content, true) do
 
 
 

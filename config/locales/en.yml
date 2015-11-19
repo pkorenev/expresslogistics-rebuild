@@ -54,3 +54,10 @@ en:
     mission: "Our mission"
     progress-dynamics: "Dynamic progresses"
     individual-aproach: "Individual approach"
+
+  articles:
+    title: Latest news
+
+  contact:
+    feedback_form:
+      title: "Leave feedback:"

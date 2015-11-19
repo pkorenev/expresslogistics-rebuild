@@ -3,6 +3,7 @@ require 'cms/url_methods'
 require "cms/meta_tags"
 require 'cms/sitemap_element'
 require 'cms/html_block'
+require 'cms/keyed_html_block'
 require 'cms/active_record_extensions'
 require 'cms/page'
 require 'cms/dynamic_router'

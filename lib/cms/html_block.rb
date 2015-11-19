@@ -5,16 +5,23 @@ module Cms
 
     attr_accessible *attribute_names
 
-    #belongs_to :attachable, polymorphic: true
+    belongs_to :attachable, polymorphic: true
 
-    translates :content
-    accepts_nested_attributes_for :translations
-    attr_accessible :translations, :translations_attributes
+    if respond_to?(:translates)
+      translates :content
+      accepts_nested_attributes_for :translations
+      attr_accessible :translations, :translations_attributes
 
-    class Translation
-      attr_accessible *attribute_names
+
+      class Translation
+        attr_accessible *attribute_names
+      end
+
+      enable_globalize_getters
+
     end
 
-    enable_globalize_getters
+    scope :by_key, ->(key) { where(key: key) }
+    scope :by_field, ->(field) { where(attachable_field_name: field) }
   end
 end

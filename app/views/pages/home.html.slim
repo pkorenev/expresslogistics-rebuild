@@ -48,22 +48,24 @@
       #hide-sec-logo.span4
         img alt="" src="/assets/logo-symbol-only.png"
       #info-text-full.span8
-        h1.welcome-msg-h
-        p
-          | Welcome to &laquo;Express logistics&raquo;
-        p.welcome-msg-p
-        p
-          | The company &laquo;Express logistics&raquo; a forwarding company which provides services in the field of logistics and multimodal transport. The main goal of our company - to organize the logistics services so that you get the desired result, were satisfied with the service and did not care what happens and how.
-        p.welcome-msg-pi
-          i
-            | Our task - to organize all operations as safely, efficiently, quickly and at affordable prices.
+        = html_block_with_fallback(:welcome_html, true) do
+          h1.welcome-msg-h
+          p
+            | Welcome to &laquo;Express logistics&raquo;
+          p.welcome-msg-p
+          p
+            | The company &laquo;Express logistics&raquo; a forwarding company which provides services in the field of logistics and multimodal transport. The main goal of our company - to organize the logistics services so that you get the desired result, were satisfied with the service and did not care what happens and how.
+          p.welcome-msg-pi
+            i
+              | Our task - to organize all operations as safely, efficiently, quickly and at affordable prices.
 /! welcome-msg
 #proverb-main
   .container
     .row
       .span12.proverb-main-center-txt
-        p.proverb-main-p
-        p
-          | Individual approach to each customer, the service impeccable and security form the high level of trust on the part of our regular clients, which we are happy to see you!
+        = html_block_with_fallback(:block_under_welcome_html) do
+          p.proverb-main-p
+          p
+            | Individual approach to each customer, the service impeccable and security form the high level of trust on the part of our regular clients, which we are happy to see you!
 /! proverb-main
 = render "articles"

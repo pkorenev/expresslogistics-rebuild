@@ -73,14 +73,43 @@ RailsAdmin.config do |config|
 
   config.model Cms::HtmlBlock do
     visible false
+
+    nested do
+      field :translations, :globalize_tabs
+    end
+  end
+
+  config.model Cms::HtmlBlock.translation_class do
+    visible false
+
+    nested do
+      field :locale, :hidden
+      field :content
+    end
   end
 
   config.model Cms::Page do
     visible false
   end
 
-  config.model Cms::HtmlBlock.translation_class do
-    visible false
 
+
+
+  config.model Cms::MetaTags do
+    visible false
   end
+
+  config.model Cms::MetaTags do
+    visible false
+  end
+
+  config.model Pages::HomePage do
+    edit do
+      field :welcome_html
+      field :block_under_welcome_html
+      field :seo_tags
+    end
+  end
+
+
 end

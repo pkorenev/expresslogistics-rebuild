@@ -2,7 +2,8 @@
   #news-home
     .container
       .row
-        h2.news-home-h2 Последние анонсы
+        h2.news-home-h2
+          = t("articles.title")
         - @articles.each do |a|
           .span6.news-full
             .news-home-img

@@ -55,3 +55,9 @@ ru:
     mission: "Наша цель"
     progress-dynamics: "Динамика развития"
     individual-aproach: "Индивидуальность"
+
+  articles:
+    title: Последние анонсы
+  contact:
+    feedback_form:
+      title: "Оставьте отзыв:"

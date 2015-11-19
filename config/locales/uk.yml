@@ -52,3 +52,10 @@ uk:
   handcrafted-by: Зроблено <a href="http://voroninstudio.eu">дизайн студією М. Вороніна</a><br/>в 2012 році.
   footer_address: с. Ставчани, Пустомитівський район., Львівська обл., Україна, 81118
   footer_tel: "тел.:"
+
+  articles:
+    title: Останні статті
+
+  contact:
+    feedback_form:
+      title: "Залишіть відгук:"
