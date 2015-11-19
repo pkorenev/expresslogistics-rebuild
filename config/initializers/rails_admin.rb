@@ -123,12 +123,12 @@ unless !!ENV['si']
     config.model Manager do
       visible false
 
-      edit do
-        field :manager_group
-        field :email
-        field :phone
-        field :translations, :globalize_tabs
-      end
+      # edit do
+      #   field :manager_group
+      #   field :email
+      #   field :phone
+      #   field :translations, :globalize_tabs
+      # end
 
       nested do
         field :email
