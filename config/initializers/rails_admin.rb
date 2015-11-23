@@ -120,6 +120,11 @@ unless !!ENV['si']
       end
     end
 
+    config.model Pages::ContactPage do
+      field :contact_data
+      field :seo_tags
+    end
+
     config.model Manager do
       visible true
 
