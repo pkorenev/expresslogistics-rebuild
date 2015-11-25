@@ -152,6 +152,7 @@ unless !!ENV['si']
       pages_navigation_label
 
       edit do
+        field :background_image
         field :welcome_html
         field :block_under_welcome_html
         field :seo_tags
@@ -161,6 +162,7 @@ unless !!ENV['si']
     config.model Pages::ContactPage do
       pages_navigation_label
 
+      field :background_image
       field :contact_data
       field :seo_tags
     end
