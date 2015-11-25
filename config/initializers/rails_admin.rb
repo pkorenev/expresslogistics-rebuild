@@ -129,10 +129,21 @@ unless !!ENV['si']
 
     config.model Cms::MetaTags do
       visible false
+
+      nested do
+        field :translations, :globalize_tabs
+      end
     end
 
     config.model Cms::MetaTags::Translation do
       visible false
+
+      nested do
+        field :locale, :hidden
+        field :title
+        field :description
+        field :keywords
+      end
     end
 
 
