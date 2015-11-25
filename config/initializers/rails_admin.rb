@@ -70,9 +70,12 @@ unless !!ENV['si']
     Service.configure_article_model
 
 
-    #Cms.configure_page_models
+    Cms.configure_page_models
+    #include_models Pages::AboutPage, Pages::ArticlesPage, Pages::ContactPage, Pages::HomePage, Pages::HomePage, Pages::OrderPage, Pages::ServicesPage
 
     include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order
+
+
 
 
     config.model Service do

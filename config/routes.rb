@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  post ":locale/contact_feedback", as: :contact_feedback, to: "pages#contact_feedback"
-  post ":locale/order", to: "pages#order"
+  scope ":locale", locale: /#{I18n.available_locales.map(&:to_s).join("|")}/ do
+    post "contact_feedback", as: :contact_feedback, to: "pages#contact_feedback"
+    post "order", to: "pages#order"
+  end
+
+
 
   get "(:locale)", to: "pages#home"
   Cms.load_routes
