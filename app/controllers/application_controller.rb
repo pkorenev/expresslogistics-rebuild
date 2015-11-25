@@ -6,6 +6,14 @@ class ApplicationController < ActionController::Base
   setup_locale
   skip_around_filter :set_locale_from_url
 
+  before_action :set_locale_for_admin
+
+  def set_locale_for_admin
+    if params[:controller] =~ /rails_admin/
+      I18n.locale = :uk
+    end
+  end
+
 
   def render_not_found
     render template: "errors/not_found"

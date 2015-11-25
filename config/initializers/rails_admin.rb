@@ -108,11 +108,15 @@ unless !!ENV['si']
       visible false
     end
 
-    config.model Cms::MetaTags do
+    config.model Cms::MetaTags::Translation do
       visible false
     end
 
+
+
     config.model Pages::HomePage do
+      pages_navigation_label
+
       edit do
         field :welcome_html
         field :block_under_welcome_html
@@ -121,6 +125,8 @@ unless !!ENV['si']
     end
 
     config.model Pages::ContactPage do
+      pages_navigation_label
+
       field :contact_data
       field :seo_tags
     end
