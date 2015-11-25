@@ -6,4 +6,6 @@ class Pages::ArticlesPage < ActiveRecord::Base
     attr_accessible attachment_name
     do_not_validate_attachment_file_type attachment_name
   end
+
+  has_html_block :intro
 end

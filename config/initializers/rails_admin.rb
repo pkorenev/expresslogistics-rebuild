@@ -198,6 +198,7 @@ unless !!ENV['si']
 
     config.model Pages::ArticlesPage do
       pages_navigation_label
+
       field :intro
       field :background_image
       field :seo_tags
