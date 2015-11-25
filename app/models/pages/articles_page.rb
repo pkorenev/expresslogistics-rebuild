@@ -1,4 +1,6 @@
-class Pages::ArticlesPage < Cms::Page
+class Pages::ArticlesPage < ActiveRecord::Base
+  acts_as_page
+
   [:background_image].each do |attachment_name|
     has_attached_file attachment_name
     attr_accessible attachment_name
