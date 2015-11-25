@@ -1,4 +1,4 @@
-class Pages::ServicesPage < Page
+class Pages::ServicesPage < Cms::Page
   [:background_image].each do |attachment_name|
     has_attached_file attachment_name
     attr_accessible attachment_name
