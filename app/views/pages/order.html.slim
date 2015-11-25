@@ -29,6 +29,7 @@ scss:
   }
 
 .page-bg style=("background-image: url('#{@page.background_image.url}')" if @page.try{|p| p.background_image.exists? } )
+  = html_block_with_fallback(:intro, true) do
   .container.service-listing
 
         /! <h2 class="services-h2">Заказать</h2
