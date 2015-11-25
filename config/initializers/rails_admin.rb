@@ -70,7 +70,7 @@ unless !!ENV['si']
     Service.configure_article_model
 
 
-    Cms.configure_page_models
+    #Cms.configure_page_models
 
     include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order
 
