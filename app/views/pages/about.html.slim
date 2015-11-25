@@ -35,7 +35,7 @@ scss:
   }
 
 /= raw @content
-.about-bg
+.about-bg style=("background-image: #{@page.background_image.url}" if @page.try{|p| p.background_image.exists? } )
   = html_block_with_fallback(:content, true) do
 
 
