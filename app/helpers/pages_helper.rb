@@ -9,7 +9,7 @@ module PagesHelper
     end
 
     page_instance.try do |p|
-      html_block = p.try{|ph| ph.html_blocks.by_field(key).first if ph.respond_to(:html_blocks) }
+      html_block = p.try{|ph| next (ph.html_blocks.by_field(key).first) if ph.respond_to(:html_blocks) }
     end
 
     if  (html_block || (html_block = Cms::KeyedHtmlBlock.by_key(key).first)) && (text = html_block.translations_by_locale[I18n.locale].try(&:content)) && text.present?
@@ -23,6 +23,5 @@ module PagesHelper
     end
 
     nil
-
   end
 end
