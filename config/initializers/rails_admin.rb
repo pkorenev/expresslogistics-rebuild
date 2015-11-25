@@ -71,9 +71,11 @@ unless !!ENV['si']
 
 
     Cms.configure_page_models
-    #include_models Pages::AboutPage, Pages::ArticlesPage, Pages::ContactPage, Pages::HomePage, Pages::HomePage, Pages::OrderPage, Pages::ServicesPage
+    include_models Pages::AboutPage, Pages::ArticlesPage, Pages::ContactPage, Pages::HomePage, Pages::HomePage, Pages::OrderPage, Pages::ServicesPage
 
     include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order
+
+
 
 
 
@@ -167,6 +169,37 @@ unless !!ENV['si']
 
       field :background_image
       field :contact_data
+      field :seo_tags
+    end
+
+    config.model Pages::OrderPage do
+      pages_navigation_label
+
+      field :background_image
+      field :seo_tags
+      field :content
+    end
+
+    config.model Pages::ServicesPage do
+      pages_navigation_label
+
+      field :background_image
+      field :seo_tags
+      field :content
+    end
+
+    config.model Pages::AboutPage do
+      pages_navigation_label
+
+      field :background_image
+      field :seo_tags
+      field :content
+    end
+
+    config.model Pages::ArticlesPage do
+      pages_navigation_label
+
+      field :background_image
       field :seo_tags
     end
 
