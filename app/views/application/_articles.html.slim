@@ -1,6 +1,6 @@
 #news-home
   .page-bg style=("background-image: url('#{@page.background_image.url}')" if @page.try{|p| p.background_image.exists? } )
-    = html_block_with_fallback(:content, true) do
+    = html_block_with_fallback(:intro, true) do
 
     - if @articles.try(&:any?)
       .container
