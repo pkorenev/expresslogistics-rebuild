@@ -1,22 +1,4 @@
 ru:
-  activerecord:
-    models:
-      order:
-        one: "Заказ"
-        other: "Заказы"
-    attributes:
-      order:
-        customer_firm: "Название фирмы-заказчика"
-        contact_name: "Контактное лицо"
-        transport_type: "Тип транспортного средства"
-        transport_from: "Маршрут транспортировки -> откуда"
-        transport_to: "Маршрут транспортировки -> куда"
-        transport_distance: "Расстояние перевозки"
-        volume: "Объем перевозки"
-        estimated_date: "Орієнтированная дата перевозки"
-        contact_phone: "Контактный телефон"
-        email: "E-mail"
-        comment: "Дополнительные пожелания заказчика"
   routes:
     pages:
       about: "o-nas"

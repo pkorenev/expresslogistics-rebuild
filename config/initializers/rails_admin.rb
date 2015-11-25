@@ -7,6 +7,31 @@ unless !!ENV['si']
     end
   end
 
+
+  def settings_navigation_label
+    navigation_label do
+      I18n.t("admin.navigation_labels.settings")
+    end
+  end
+
+  def include_models(config, *models)
+    models.each do |model|
+      config.included_models += [model]
+
+      if !model.instance_of?(Class)
+        Dir[Rails.root.join("app/models/#{model.underscore}")].each do |file_name|
+          require file_name
+        end
+
+        model = model.constantize rescue nil
+      end
+
+      if model.respond_to?(:translates?) && model.translates?
+        config.included_models += [model.translation_class]
+      end
+    end
+  end
+
   RailsAdmin.config do |config|
 
     ### Popular gems integration
@@ -47,12 +72,7 @@ unless !!ENV['si']
 
     Cms.configure_page_models
 
-    [Manager, ManagerGroup].each do |m|
-      config.included_models += [m]
-      if m.respond_to?(:translates?) && m.translates?
-        config.included_models += [m.translation_class]
-      end
-    end
+    include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order
 
 
     config.model Service do
@@ -67,6 +87,9 @@ unless !!ENV['si']
       end
       field :home_avatar do
         label "аватарка для головної сторінки"
+      end
+      field :background_image do
+        label "фонова картинка (в самій одиниці)"
       end
       field :released_at do
         label I18n.t("plugins.acts_as_article.released_at")
@@ -172,7 +195,22 @@ unless !!ENV['si']
     end
 
 
+    %w(ContactFeedback Order).each do |name|
+      config.model "FormConfigs::#{name}" do
+        settings_navigation_label
+        visible true
+        list do
+          field :email_receivers
+        end
 
+        edit do
+          field :email_receivers do
+            label "Емейли отримувачів"
+            help "кожен емейл в новому рядку"
+          end
+        end
+      end
+    end
 
   end
 end

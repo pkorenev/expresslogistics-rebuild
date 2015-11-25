@@ -1,16 +1,67 @@
 form
-  position: relative
+	position: relative
 
-  .success
-    text-align: center
-    top: 50%
-    left: 50%
-    +transform(translate(-50%, -50%))
-    position: absolute
-  .preloader
-    img
-      display: block
-      left: 50%
-      top: 50%
-      position: absolute
-      +transform(translate(-50%, -50%))
+	.success
+		text-align: center
+		top: 50%
+		left: 50%
+		+transform(translate(-50%, -50%))
+		position: absolute
+	.preloader
+		img
+			display: block
+			left: 50%
+			top: 50%
+			position: absolute
+			+transform(translate(-50%, -50%))
+
+
+
+.two-inputs
+	//input
+		display: inline-block !important
+		width: calc(49% - 8px)
+		margin: 0 1% 0 0
+
+
+
+
+.input
+	margin: 1rem 0
+
+
+
+
+.columns
+	display: inline-block
+	float: left
+	padding: 0 15px
+	min-height: 1px
+	box-sizing: border-box
+
+	@for $i from 1 through 12
+		&.large-#{$i}
+			width: percentage($i/12)
+
+
+.clear
+	float: left
+	clear: both
+
+
+#transport-from-to-inputs
+	input, .mdash
+		float: left
+		display: inline-block !important
+		box-sizing: border-box
+	input
+		width: calc(50% - 12px)
+	.mdash
+		margin-left: 4px
+		margin-right: 4px
+		width: 16px
+		line-height: 54px
+
+
+#contact_feedback_message
+	height: 236px

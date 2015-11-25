@@ -22,10 +22,13 @@ class PagesController < ApplicationController
   def order
     @order = Order.new(params[:order])
     if @_request.post?
-      if @order.valid?
-        @order.save
+      if @order.save
         flash[:notice] = "Thanks for sending form"
-        @order = Order.new
+
+        ExpressMailer.order(@order).deliver
+        render inline: @order.to_json, status: 201
+        #@order = Order.new
+
       end
     end
   end

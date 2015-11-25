@@ -32,6 +32,7 @@ a:hover{color: #777777;}
     background: none;
     border: none;
     outline: none;
+    padding: 0;
   }
 
   &.contact_feedback{
@@ -640,9 +641,14 @@ ul.foot-menu li a{
 	font-weight: normal !important;
 }
 
+.page-bg{
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: right top;
+}
 
 /* SERVICE PAGE */
-#services{
+.services-bg{
 	background: url('el-web-bg-1-1.jpg') right top no-repeat transparent;
 }
 
@@ -746,7 +752,7 @@ ul.foot-menu li a{
 
 
 /* ABOUT */
-#about{
+.about-bg{
 	background: url('el-web-bg-0-1.jpg') right top no-repeat transparent;
 }
 
@@ -818,7 +824,7 @@ ul.foot-menu li a{
 
 /* Contact us */
 
-#contact-page{
+.contact-bg{
 	background: url('el-web-contacts-1_03.jpg') top right no-repeat transparent;
 }
 

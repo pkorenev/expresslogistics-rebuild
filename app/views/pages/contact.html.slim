@@ -1,11 +1,12 @@
-.container.contact-proverb
-  /= raw @page.managers.get_content
-  = html_block_with_fallback(:contact_data, true) do
+.contact-bg
+  .container.contact-proverb
+    /= raw @page.managers.get_content
+    = html_block_with_fallback(:contact_data, true) do
 
-= render "contact_map"
-- if @manager_groups.try(&:any?)
-  = render "all_managers"
-- else
-  = render "contact_managers"
-  = render "contact_submanagers"
-= render "contact_form"
+  = render "contact_map"
+  - if @manager_groups.try(&:any?)
+    = render "all_managers"
+  - else
+    = render "contact_managers"
+    = render "contact_submanagers"
+  = render "contact_form"

@@ -1,15 +1,16 @@
-.container.service-listing
-  .row
-    - @services.each do |s|
-      .span12.service-listing-full-width class="#{cycle(%w(left right))}-service"
-        .service-img
-          a href=service_path(id: s.get_url_fragment)
-            img alt=s.get_name src=s.avatar.url(:small) style=("width: 100%;") title=s.get_name
-        .service-descr
-          h3
-            a.service-links href=service_path(id: s.get_url_fragment) title=(s.get_name)
-              = s.get_name
-          p
-            = s.get_description
-          p.news-home-link
-            a.service-links.rm-border href=service_path(id: s.get_url_fragment) title=(s.get_name)
+.services-bg
+  .container.service-listing
+    .row
+      - @services.each do |s|
+        .span12.service-listing-full-width class="#{cycle(%w(left right))}-service"
+          .service-img
+            a href=service_path(id: s.get_url_fragment)
+              img alt=s.get_name src=s.avatar.url(:small) style=("width: 100%;") title=s.get_name
+          .service-descr
+            h3
+              a.service-links href=service_path(id: s.get_url_fragment) title=(s.get_name)
+                = s.get_name
+            p
+              = s.get_description
+            p.news-home-link
+              a.service-links.rm-border href=service_path(id: s.get_url_fragment) title=(s.get_name)

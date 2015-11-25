@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      order:
+        one: "Order"
+        other: "Orders"
+    attributes:
+      order:
+        customer_firm: "Customer company name"
+        contact_name: "Contact person"
+        transport_type: "Type of transport"
+        transport_from: "transportation route -> from"
+        transport_to: "transportation route -> to"
+        transport_distance: "Transportation distance"
+        volume: "Transportation volume"
+        estimated_date: "Estimated transportation date"
+        contact_phone: "Contact phone"
+        email: "E-mail"
+        comment: "Additional customer requirements"

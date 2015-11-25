@@ -5,8 +5,12 @@ class Service < ActiveRecord::Base
 
   scope :home_featured, -> { published.last(6) }
 
-  has_attached_file :home_avatar
-  attr_accessible :home_avatar
 
-  do_not_validate_attachment_file_type :home_avatar
+
+  [:home_avatar, :background_image].each do |attachment_name|
+    has_attached_file attachment_name
+    attr_accessible attachment_name
+    do_not_validate_attachment_file_type attachment_name
+  end
+
 end

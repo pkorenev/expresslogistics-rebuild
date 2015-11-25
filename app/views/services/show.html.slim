@@ -1,11 +1,12 @@
-.container.news-item-pad
-  .row
-    .span4.news-item-make-full
-      img.news-item-img alt=(@service.get_name) src=@service.avatar.url(:medium) style=("border: 0 !important;")
-    .span8.news-item-make-full
-      h1.news-item-h1
-        = @service.get_name
-      p.news-descr-small
-        = @service.get_description
-      .service-item-descr-full
-        = raw @service.get_content
+.page-bg style=("background-image: url('#{@service.background_image.url}')" if @service.background_image.exists?)
+  .container.news-item-pad
+    .row
+      .span4.news-item-make-full
+        img.news-item-img alt=(@service.get_name) src=@service.avatar.url(:medium) style=("border: 0 !important;")
+      .span8.news-item-make-full
+        h1.news-item-h1
+          = @service.get_name
+        p.news-descr-small
+          = @service.get_description
+        .service-item-descr-full
+          = raw @service.get_content

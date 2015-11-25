@@ -34,47 +34,55 @@ scss:
       = simple_form_for @order, url: "", type: "post", html: { class: "ajax-submit" } do |f|
         .form-content
           .row
-            .span6
-              p
-                = f.input_field :customer_firm
-                = f.label :customer_firm
-              p
-                = f.input_field :contact_name
-                = f.label :contact_name
+            .span8
+              - f.with_options placeholder: true do |f|
+                .columns.large-12
+                  .input
+                    = f.input_field :customer_firm
+                    = f.label :customer_firm
+                  .input
+                    = f.input_field :contact_name
+                    = f.label :contact_name
 
-              p
-                = f.input_field :contact_phone
-                = f.label :contact_phone
-              p
-                = f.input_field :email
-                = f.label :email
+                  .input
+                    = f.input_field :contact_phone
+                    = f.label :contact_phone
+                  .input
+                    = f.input_field :email
+                    = f.label :email
 
-              p
-                = f.input_field :transport_type
-                = f.label :transport_type
-              p
-                = f.input_field :transport_from
-                = f.label :transport_from
-              p
-                = f.input_field :transport_to
-                = f.label :transport_to
-              p
-                = f.input_field :transport_distance
-                = f.label :transport_distance
-              p
-                = f.input_field :volume
-                = f.label :volume
-              p
-                = f.input_field :estimated_date
-                = f.label :estimated_date
+                  .input
+                    = f.input_field :transport_type
+                    = f.label :transport_type
 
+                  #transport-from-to-inputs
+                    = f.input_field :transport_from
+                    .mdash
+                      |&mdash;
+                    = f.input_field :transport_to
+                    = f.label :transport_from
 
-              p
-                = f.text_area :comment
-                = f.label :comment
-              p style="text-align: right"
-                button type="submit"
-                  img alt="" src="/assets/send.png"
+                .clear
+                .columns.large-4
+                  .input
+                    = f.input_field :transport_distance
+                    = f.label :transport_distance
+                .columns.large-4
+                  .input
+                    = f.input_field :volume
+                    = f.label :volume
+                .columns.large-4
+                  .input
+                    = f.input_field :estimated_date
+                    = f.label :estimated_date
+
+                .columns.large-12
+                  .input
+                    = f.text_area :comment
+                    = f.label :comment
+                  p style="text-align: right"
+                    button type="submit"
+                      img alt="" src="/assets/send.png"
 
 
         .preloader style="display: none;"

@@ -19,3 +19,40 @@ en:
       contact_feedback:
         title: "Thank you for your feedback"
         description: "Some description"
+
+
+    placeholders:
+      defaults:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        message: "Your message"
+      order:
+        customer_firm: "Customer firm"
+        contact_name: "Contact person name"
+        contact_phone: "Phone"
+        transport_type: "Фура"
+        transport_from: "Пункт А"
+        transport_to: "Пункт Б"
+        transport_distance: "10"
+        volume: "3000"
+        estimated_date: "10.10.2016"
+      contact_feedback:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        message: "Your message"
+
+
+    labels:
+      order:
+        transport_type: "Vehicle type (tank, grain, etc.)"
+        transport_from: "Transportation route (from - where)"
+        transport_distance: "transport distance (km)"
+        volume: "traffic volume (liters)"
+        estimated_date: "approximate date of shipment (DD.MM.YYYY)"
+      contact_feedback:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        message: "Your message"

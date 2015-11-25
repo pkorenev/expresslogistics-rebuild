@@ -1,0 +1,39 @@
+uk:
+  activerecord:
+    models:
+      pages/about_page: "Про нас"
+      pages/contact_page: "Контакти"
+      pages/home_page: "Головна"
+      pages/order_page: "Замовлення"
+      article:
+        one: "Стаття"
+        other: "Статті"
+      manager:
+        one: "Менеджер"
+        other: "Менеджери"
+      manager_group:
+        one: "Група менеджерів"
+        other: "Групи менеджерів"
+      service:
+        one: "Послуга"
+        other: "Послуги"
+      order:
+        one: "Замовлення"
+        other: "Замовлення"
+      form_configs/order: "Форма Замовлення"
+      form_configs/contact_feedback: "Форма Відгуку"
+    attributes:
+      article:
+        url: "URL сторінки"
+      order:
+        email: "Електронна скринька"
+        customer_firm: "Назва фірми-замовника"
+        contact_name: "Контактна особа"
+        transport_type: "Тип транспортного засобу"
+        transport_from: "Маршрут перевезення -> звідки"
+        transport_to: "Маршрут перевезення -> куди"
+        transport_distance: "Відстань перевезення"
+        volume: "Об'єм перевезення"
+        estimated_date: "Орієнтовна дата перевезення"
+        contact_phone: "Контактний телефон"
+        comment: "Додаткові побажання замовника"

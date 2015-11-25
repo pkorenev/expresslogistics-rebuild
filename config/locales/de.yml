@@ -1,22 +1,4 @@
 de:
-  activerecord:
-    models:
-      order:
-        one: "Order"
-        other: "Orders"
-    attributes:
-      order:
-        customer_firm: "Kundenfirmennamen"
-        contact_name: "Ansprechpartner"
-        transport_type: "Art der Beförderung"
-        transport_from: "Transportweg -> aus"
-        transport_to: "Transportweg -> zu"
-        transport_distance: "Entfernung der öffentlichen Verkehrsmittel"
-        volume: "Transportvolumen"
-        estimated_date: "Voraussichtliche Transportdatum"
-        contact_phone: "Kontakt Telefon"
-        email: "E-mail"
-        comment: "Zusätzliche Kundenanforderungen"
   routes:
     root: ""
     pages:

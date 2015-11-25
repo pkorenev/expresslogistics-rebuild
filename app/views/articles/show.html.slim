@@ -1,14 +1,15 @@
-.container.news-item-pad
-  .row
-    .span4.news-item-make-full
-      img.news-item-img alt=(@article.get_name) src=@article.avatar.url(:medium) style=""
-    .span8.news-item-make-full
-      h1.news-item-h1
-        = @article.get_name
-      p.news-descr-small
-        = @article.get_description
-      p.news-descr-full
-        = raw @article.get_content
+.page-bg style=("background-image: url('#{@article.background_image.url}')" if @article.background_image.exists?)
+  .container.news-item-pad
+    .row
+      .span4.news-item-make-full
+        img.news-item-img alt=(@article.get_name) src=@article.avatar.url(:medium) style=""
+      .span8.news-item-make-full
+        h1.news-item-h1
+          = @article.get_name
+        p.news-descr-small
+          = @article.get_description
+        p.news-descr-full
+          = raw @article.get_content
 
-      /h3 style=("color: #F27321;")  Галерея
-      /p
+        /h3 style=("color: #F27321;")  Галерея
+        /p

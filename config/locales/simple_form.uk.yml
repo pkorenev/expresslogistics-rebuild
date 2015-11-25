@@ -15,6 +15,36 @@ uk:
         email: "Електронна скринька"
         phone: "Телефон"
         message: "Ваше повідомлення"
+      order:
+        customer_firm: "Компанія-замовник"
+        contact_name: "ПІП"
+        contact_phone: "телефон"
+        transport_type: "Фура"
+        transport_from: "Пункт А"
+        transport_to: "Пункт Б"
+        transport_distance: "10"
+        volume: "3000"
+        estimated_date: "10.10.2016"
+      contact_feedback:
+        name: "Ім’я"
+        email: "Електронна скринька"
+        phone: "Телефон"
+        message: "Ваше повідомлення"
+
+
+
+    labels:
+      order:
+        transport_type: "Тип транспортного засобу (автоцистерна, зерновіз тощо)"
+        transport_from: "Маршрут перевезення (Звідки - куди)"
+        transport_distance: "відстань перевезення (км)"
+        volume: "об'єм перевезення (л)"
+        estimated_date: "орієнтовна дата перевезення (ДД.ММ.РРРР)"
+      contact_feedback:
+        name: "Ім’я"
+        email: "Електронна скринька"
+        phone: "Телефон"
+        message: "Ваше повідомлення"
 
 
     success-message:

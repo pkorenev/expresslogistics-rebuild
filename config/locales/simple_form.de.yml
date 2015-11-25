@@ -11,10 +11,39 @@ de:
 
     placeholders:
       defaults:
-        name: "Ім’я"
-        email: "Електронна скринька"
-        phone: "Телефон"
-        message: "Ваше повідомлення"
+        name: "Name"
+        email: "E-Mail-Adresse"
+        phone: "Telefon"
+        message: "Ihre Nachricht"
+      order:
+        customer_firm: "Firmenkunden"
+        contact_name: "SMPS"
+        contact_phone: "Telefon"
+        transport_type: "Fura"
+        transport_from: "Artikel A"
+        transport_to: "B"
+        transport_distance: "10"
+        volume: "3000"
+        estimated_date: "10.10.2016"
+      contact_feedback:
+        name: "Name"
+        email: "E-Mail-Adresse"
+        phone: "Telefon"
+        message: "Ihre Nachricht"
+
+
+    labels:
+      order:
+        transport_type: "Fahrzeugtyp (Tank, Getreide, etc.)"
+        transport_from: "Transportroute (von - wo)"
+        transport_distance: "Transportentfernung (km)"
+        volume: "Verkehrsvolumen (Liter)"
+        estimated_date: "ungefähre Datum der Lieferung (TT.MM.JJJJ)"
+      contact_feedback:
+        name: "Name"
+        email: "E-Mail-Adresse"
+        phone: "Telefon"
+        message: "Ihre Nachricht"
 
 
     success-message:

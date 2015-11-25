@@ -23,7 +23,7 @@
 
           .span8.contact-make-full-form
             p
-              = f.text_area :message
+              = f.text_area :message, placeholder: t("simple_form.placeholders.defaults.message")
               = f.label :message
           .span12
             div style=("text-align: right;")
