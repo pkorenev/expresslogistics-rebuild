@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
   end
 
   def index
-    @services = Service.published.default_order
+    @services = Service.published
   end
 
   def set_services_breadcrumbs
