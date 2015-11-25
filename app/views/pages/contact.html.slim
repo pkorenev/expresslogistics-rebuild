@@ -1,4 +1,4 @@
-.contact-bg style=("background-image: #{@page.background_image.url}" if @page.try{|p| p.background_image.exists? } )
+.contact-bg style=("background-image: url('#{@page.background_image.url}')" if @page.try{|p| p.background_image.exists? } )
   .container.contact-proverb
     /= raw @page.managers.get_content
     = html_block_with_fallback(:contact_data, true) do
