@@ -177,7 +177,7 @@ unless !!ENV['si']
 
       field :background_image
       field :seo_tags
-      field :content
+      field :intro
     end
 
     config.model Pages::ServicesPage do
@@ -185,7 +185,7 @@ unless !!ENV['si']
 
       field :background_image
       field :seo_tags
-      field :content
+      field :intro
     end
 
     config.model Pages::AboutPage do
@@ -198,7 +198,7 @@ unless !!ENV['si']
 
     config.model Pages::ArticlesPage do
       pages_navigation_label
-
+      field :intro
       field :background_image
       field :seo_tags
     end
