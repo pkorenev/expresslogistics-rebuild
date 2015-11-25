@@ -5,6 +5,8 @@ uk:
       pages/contact_page: "Контакти"
       pages/home_page: "Головна"
       pages/order_page: "Замовлення"
+      pages/services_page: "Послуги"
+      pages/articles_page: "Статті"
       article:
         one: "Стаття"
         other: "Статті"

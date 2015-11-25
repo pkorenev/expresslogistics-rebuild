@@ -9,13 +9,14 @@ class ArticlesController < ApplicationController
       render_not_found
     else
       @breadcrumbs << { url: send("article_path", id: @article.get_url_fragment), name: @article.get_name }
-
+      @page = @article
 
     end
   end
 
   def index
     @articles = Article.published.default_order
+    @page = Pages::ArticlesPage.first
   end
 
   def set_article

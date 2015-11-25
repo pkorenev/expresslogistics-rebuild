@@ -9,11 +9,13 @@ class ServicesController < ApplicationController
       render_not_found
     else
       @breadcrumbs << { url: send("service_path", id: @service.get_url_fragment), name: @service.get_name }
+      @page = @service
     end
   end
 
   def index
     @services = Service.published
+    @page = Pages::ServicesPage.first
   end
 
   def set_services_breadcrumbs
