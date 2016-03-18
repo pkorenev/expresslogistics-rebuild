@@ -43,3 +43,7 @@ en:
   contact:
     feedback_form:
       title: "Leave feedback:"
+
+
+  # basic
+  submit-button: "Submit"

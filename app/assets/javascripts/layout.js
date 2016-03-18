@@ -46,8 +46,8 @@ initializeGoogleMap = function(){
 
     //lat = 49.829182
     //lng = 24.01275
-    lat = 49.81571
-    lng = 23.919465
+    lat = 49.791651
+    lng = 23.932994
 
     latlng = new google.maps.LatLng(lat, lng)
 

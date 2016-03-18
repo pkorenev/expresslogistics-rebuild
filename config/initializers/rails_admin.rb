@@ -86,12 +86,13 @@ unless !!ENV['si']
       field :translations, :globalize_tabs
     end  
 
-    config.model HomeBanner::Translation do
-      visible false
-      field :locale, :hidden
-      field :description
-    end  
-
+    if defined?(HomeBanner::Translation)
+      config.model HomeBanner::Translation do
+        visible false
+        field :locale, :hidden
+        field :description
+      end
+    end
 
 
     config.model Service do
@@ -112,6 +113,8 @@ unless !!ENV['si']
       end
       field :released_at do
         label I18n.t("plugins.acts_as_article.released_at")
+
+
       end
       field :seo_tags do
         label I18n.t("plugins.acts_as_article.seo_tags")

@@ -49,3 +49,7 @@ ru:
       office_manager: "Office manager:"
     contact_submanagers:
       title: "Manager of Commercial and Logistics Department:"
+
+
+  # basic
+  submit-button: "Отправить"

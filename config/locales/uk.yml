@@ -40,4 +40,6 @@ uk:
 
   contact:
     feedback_form:
-      title: "Залишіть відгук:"
+      title: "Залиште відгук:"
+  # basic
+  submit-button: "Надіслати"

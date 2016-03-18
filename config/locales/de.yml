@@ -44,3 +44,7 @@ de:
   contact:
     feedback_form:
       title: "Hinterlasse einen Kommentar:"
+
+
+  # basic
+  submit-button: "Einreichen"

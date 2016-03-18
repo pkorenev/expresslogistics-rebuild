@@ -20,7 +20,9 @@ class HomeBanner < ActiveRecord::Base
       end
 
 
+  if self.table_exists?
     initialize_globalize
+  end
 
 	[:image].each do |attachment_name|
     has_attached_file attachment_name, styles: { full_width: "1980x500#"  }

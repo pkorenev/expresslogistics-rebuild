@@ -6,7 +6,7 @@ class CreateHomeBanners < ActiveRecord::Migration
       t.attachment :image
       t.text :description
     end
-
+    HomeBanner.initialize_globalize
     HomeBanner.create_translation_table!(description: :text)
   end
 
