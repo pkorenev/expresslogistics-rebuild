@@ -24,6 +24,9 @@ uk:
         other: "Замовлення"
       form_configs/order: "Форма Замовлення"
       form_configs/contact_feedback: "Форма Відгуку"
+      home_banner: 
+        one: "Банер на головну"
+        other: "Банери на головну"
     attributes:
       article:
         url: "URL сторінки"
@@ -39,3 +42,6 @@ uk:
         estimated_date: "Орієнтовна дата перевезення"
         contact_phone: "Контактний телефон"
         comment: "Додаткові побажання замовника"
+      pages/home_page:
+        welcome_html: "Привітальний текст"
+        block_under_welcome_html: "Блок під привітальним текстом"

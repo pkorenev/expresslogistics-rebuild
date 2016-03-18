@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
     @articles = Article.home_featured
     @services = Service.home_featured
-
+    @banners = HomeBanner.published.sort_by_sorting_position
 
   end
 

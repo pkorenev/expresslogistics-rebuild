@@ -2,28 +2,20 @@
   /.container-fluid.container-940
     .row-fluid
       .span12
+  
+
+
   #banner_j
     .sliderContent
-      .item.first-slide
-        img alt="" src="/assets/el-banner-1.png"
-        .flex-info-block
-          .flex-info-block-p
-            p cargo of any shape and size
-            p will transport by land
-            p to anywhere!
-      .item.third-slide
-        img alt="" src="/assets/el-banner-2.png"
-        .flex-info-block
-          .flex-info-block-p
-            p fast and sensitive
-            p air delivery anywhere in the world
-      /! <p>в любую точку!</p
-      .item.last-slide
-        img alt="" src="/assets/el-banner-4a.png"
-        .flex-info-block
-          .flex-info-block-p
-            p an economical way of transporting
-            p goods over long distances
+      - @banners.each do |b|
+        - css_class = cycle("first-slide", "third-slide", "last-slide" )
+        .item class=css_class
+          img alt="" src=b.image.url(:full_width)
+          .flex-info-block
+            .flex-info-block-p
+              = raw b.translations_by_locale[I18n.locale].description
+      
+      
   #banner-small
     .container
       .row
@@ -68,4 +60,4 @@
           p
             | Individual approach to each customer, the service impeccable and security form the high level of trust on the part of our regular clients, which we are happy to see you!
 /! proverb-main
-= render "articles"
+/= render "articles"

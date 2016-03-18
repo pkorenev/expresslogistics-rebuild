@@ -76,7 +76,21 @@ unless !!ENV['si']
     include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order
 
 
+    include_models config, User
 
+    include_models config, HomeBanner
+
+    config.model HomeBanner do 
+      field :published
+      field :image
+      field :translations, :globalize_tabs
+    end  
+
+    config.model HomeBanner::Translation do
+      visible false
+      field :locale, :hidden
+      field :description
+    end  
 
 
 
