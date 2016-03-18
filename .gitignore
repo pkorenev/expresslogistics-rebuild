@@ -18,3 +18,8 @@
 
 
 /config/settings
+
+/vendor
+/.idea
+/public
+/Gemfile.lock
