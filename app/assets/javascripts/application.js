@@ -11,7 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery/dist/jquery.min.js
-//= require fancybox/source/jquery.fancybox.pack
+//= require fancybox/dist/jquery.fancybox.min
 //= require jquery-ui/jquery-ui.min
 //= require mobilyslider
 //= require bxslider/source/jquery.bxSlider
