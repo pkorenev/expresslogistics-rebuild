@@ -14,7 +14,7 @@
 //= require fancybox/dist/jquery.fancybox.min
 //= require jquery-ui/jquery-ui.min
 //= require mobilyslider
-//= require bxslider/source/jquery.bxSlider
+//= require bxslider/jquery.bxSlider.min
 
 //= require layout
 //= require home
