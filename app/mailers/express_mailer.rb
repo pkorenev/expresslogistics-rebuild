@@ -18,7 +18,7 @@ class ExpressMailer < ApplicationMailer
     mail(
         #template_path: "views/mailers/faq_request",
         template_path: "mailers/express",
-        template_name: "order",
+        template_name: "order_admin_notification",
         to: to,
         subject: "New Order from expresslogistics.com.ua",
         from: "ExpressLogistics"
