@@ -73,7 +73,7 @@ unless !!ENV['si']
     Cms.configure_page_models
     include_models config, Pages::AboutPage, Pages::ArticlesPage, Pages::ContactPage, Pages::HomePage, Pages::HomePage, Pages::OrderPage, Pages::ServicesPage
 
-    include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order
+    include_models config, Manager, ManagerGroup, FormConfigs::ContactFeedback, FormConfigs::Order, ContactFeedback, Order
 
 
     include_models config, User
