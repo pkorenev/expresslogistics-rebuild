@@ -22,6 +22,7 @@ class PagesController < ApplicationController
   def order
     @order = Order.new(params[:order])
     if @_request.post?
+      return render json: {}, status: 400 if params[:email].present?	    
       if @order.save
         flash[:notice] = "Thanks for sending form"
 
@@ -35,7 +36,7 @@ class PagesController < ApplicationController
 
   def contact_feedback
     @contact_feedback = ContactFeedback.create(contact_feedback_params)
-
+    return render json: {}, status: 400 if params[:email].present?
     if @contact_feedback.save
       ExpressMailer.contact_feedback(@contact_feedback).deliver
       render inline: @contact_feedback.to_json, status: 201

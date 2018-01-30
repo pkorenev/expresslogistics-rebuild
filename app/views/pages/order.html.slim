@@ -34,6 +34,7 @@ scss:
 
         /! <h2 class="services-h2">Заказать</h2
         = simple_form_for @order, url: "", type: "post", html: { class: "ajax-submit" } do |f|
+          input.ab type="email" name="email"
           .form-content
             .row
               .span8
